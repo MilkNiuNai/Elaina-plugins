@@ -20,13 +20,13 @@
     "tags": ["工具"]
   },
   {
-    "name": "yh-qcj",
+    "name": "云痕前置插件",
     "author": "云痕",
     "description": "前置插件：统一加载 config/ 所有 YAML 配置，自动生成加载日志，供其他插件调用",
-    "version": "1.0.0",
+    "version": "1.5.0",
     "category": "前置插件",
     "github": "https://github.com/yhkj-nb/yh-qcj",
     "branch": "main",
-    "tags": ["前置插件", "配置加载", "YAML", "日志"]
+    "tags": ["前置插件", "配置加载", "YAML" ]
   }
 ]
