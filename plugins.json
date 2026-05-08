@@ -1,6 +1,7 @@
 [
   {
     "name": "system",
+    "type": "plugin",
     "author": "ElainaBot",
     "description": "框架内置系统插件, 提供基础信息、管理、查询、示例等功能",
     "version": "1.0.0",
@@ -11,6 +12,7 @@
   },
   {
     "name": "API调用器",
+    "type": "plugin",
     "author": "洛",
     "description": "可视化API调用插件，支持指令触发、链式请求、条件响应解析",
     "version": "1.0.0",
@@ -21,12 +23,57 @@
   },
   {
     "name": "云痕前置插件",
+    "type": "plugin",
     "author": "云痕",
     "description": "前置插件：统一加载 config/ 所有 YAML 配置，自动生成加载日志，供其他插件调用",
     "version": "1.5.0",
     "category": "前置插件",
     "github": "https://github.com/yhkj-nb/yh-qcj",
     "branch": "main",
-    "tags": ["前置插件", "配置加载", "YAML" ]
+    "tags": ["前置插件", "配置加载", "YAML"]
+  },
+  {
+    "name": "image_hosting",
+    "type": "module",
+    "author": "ElainaBot",
+    "description": "统一图床上传 (COS / B站 / QQ频道 / ChatGLM / Ukaka / 星野 / Nature)",
+    "version": "1.1.0",
+    "category": "服务",
+    "github": "https://github.com/ElainaCore/ElainaBot_v2",
+    "branch": "main",
+    "tags": ["图床", "上传", "COS"]
+  },
+  {
+    "name": "datastore",
+    "type": "module",
+    "author": "ElainaBot",
+    "description": "MySQL + Redis 统一数据存储模块, 异步连接池与完整 CRUD / 缓存操作",
+    "version": "1.0.0",
+    "category": "服务",
+    "github": "https://github.com/ElainaCore/ElainaBot_v2",
+    "branch": "main",
+    "tags": ["数据库", "MySQL", "Redis"]
+  },
+  {
+    "name": "playwright",
+    "type": "module",
+    "author": "ElainaBot",
+    "description": "异步 Playwright 浏览器渲染, 支持 URL/HTML 截图与 PDF 导出",
+    "version": "1.0.0",
+    "category": "服务",
+    "github": "https://github.com/ElainaCore/ElainaBot_v2",
+    "branch": "main",
+    "tags": ["渲染", "截图", "Playwright"]
+  },
+  {
+    "name": "onebot_adapter",
+    "type": "module",
+    "author": "Elaina",
+    "description": "OneBot 11 协议适配器, 将消息/事件推送到外部机器人框架",
+    "version": "1.0.0",
+    "category": "适配器",
+    "github": "https://github.com/ElainaCore/ElainaBot_v2",
+    "branch": "main",
+    "tags": ["OneBot", "适配器", "WebSocket"]
   }
 ]

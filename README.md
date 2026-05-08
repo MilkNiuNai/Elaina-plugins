@@ -2,7 +2,7 @@
 
 # Elaina-plugins
 
-ElainaBot 官方插件市场 — 在这里发现和分享插件
+ElainaBot 官方插件与模块市场 — 在这里发现和分享插件/模块
 
 [![ElainaBot](https://img.shields.io/badge/框架-ElainaBot_v2-blue)](https://github.com/ElainaCore/ElainaBot_v2)
 [![QQ群](https://img.shields.io/badge/QQ交流群-1085402468-blue)](https://qm.qq.com/q/5O3xGoe4so)
@@ -58,6 +58,7 @@ __plugin_meta__ = {
 [
   {
     "name": "插件目录名",
+    "type": "plugin",
     "author": "作者",
     "description": "插件描述",
     "version": "1.0.0",
@@ -73,14 +74,15 @@ __plugin_meta__ = {
 
 | 字段 | 必填 | 说明 |
 |------|------|------|
-| `name` | ✅ | 插件名，安装后的目录名 `plugins/<name>` |
+| `name` | ✅ | 名称, 安装后的目录名 (`plugins/<name>` 或 `modules/<name>`) |
+| `type` | ✅ | 类型: `plugin` 或 `module` |
 | `author` | ✅ | 作者名 |
-| `description` | ✅ | 插件描述 |
+| `description` | ✅ | 描述 |
 | `version` | ✅ | 版本号 |
-| `category` | ✅ | 分类 (工具/娱乐/管理/查询/其他) |
+| `category` | ✅ | 分类 |
 | `github` | ✅ | GitHub 仓库地址 |
 | `branch` | ❌ | 分支名，默认 `main` |
-| `path` | ❌ | 仓库内文件路径 (单文件插件用，如 `plugins/hello/hello.py`) |
+| `path` | ❌ | 仓库内文件路径 (单文件插件用) |
 | `tags` | ❌ | 标签数组，用于搜索 |
 
 #### 两种安装模式
@@ -104,9 +106,22 @@ __plugin_meta__ = {
 }
 ```
 
+#### 模块元数据
+
+模块在 `main.py` 中声明 `__module_meta__`:
+
+```python
+__module_meta__ = {
+    'name': '模块名',
+    'description': '模块描述',
+    'version': '1.0.0',
+    'author': '作者',
+}
+```
+
 ## 📋 提交规范
 
 - 额外 pip 依赖请在仓库中提供 `requirements.txt`
-- 插件代码中必须包含 `__plugin_meta__` 元数据
+- 插件代码必须包含 `__plugin_meta__`, 模块必须包含 `__module_meta__`
 - 禁止提交恶意代码、违法内容
 
