@@ -15,7 +15,7 @@
     "type": "plugin",
     "author": "冷曦",
     "description": "可视化工作流自定义API，热更新，支持变量与节点输出",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "category": "工具",
     "github": "https://github.com/lengxi-root/elaina-plugin-workflowapi",
     "branch": "main",
