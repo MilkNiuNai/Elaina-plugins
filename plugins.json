@@ -8,7 +8,11 @@
     "category": "系统",
     "github": "https://github.com/ElainaCore/elaina-plugin-system",
     "branch": "main",
-    "tags": ["系统", "管理", "内置"]
+    "tags": [
+      "系统",
+      "管理",
+      "内置"
+    ]
   },
   {
     "name": "工作流API",
@@ -19,7 +23,9 @@
     "category": "工具",
     "github": "https://github.com/lengxi-root/elaina-plugin-workflowapi",
     "branch": "main",
-    "tags": ["工具"]
+    "tags": [
+      "工具"
+    ]
   },
   {
     "name": "云痕前置插件",
@@ -30,7 +36,11 @@
     "category": "前置插件",
     "github": "https://github.com/yhkj-nb/yh-qcj",
     "branch": "main",
-    "tags": ["前置插件", "配置加载", "YAML"]
+    "tags": [
+      "前置插件",
+      "配置加载",
+      "YAML"
+    ]
   },
   {
     "name": "image_hosting",
@@ -41,7 +51,11 @@
     "category": "服务",
     "github": "https://github.com/ElainaCore/ElainaBot_v2",
     "branch": "main",
-    "tags": ["图床", "上传", "COS"]
+    "tags": [
+      "图床",
+      "上传",
+      "COS"
+    ]
   },
   {
     "name": "datastore",
@@ -52,7 +66,11 @@
     "category": "服务",
     "github": "https://github.com/ElainaCore/ElainaBot_v2",
     "branch": "main",
-    "tags": ["数据库", "MySQL", "Redis"]
+    "tags": [
+      "数据库",
+      "MySQL",
+      "Redis"
+    ]
   },
   {
     "name": "playwright",
@@ -63,7 +81,11 @@
     "category": "服务",
     "github": "https://github.com/ElainaCore/ElainaBot_v2",
     "branch": "main",
-    "tags": ["渲染", "截图", "Playwright"]
+    "tags": [
+      "渲染",
+      "截图",
+      "Playwright"
+    ]
   },
   {
     "name": "onebot_adapter",
@@ -74,7 +96,11 @@
     "category": "适配器",
     "github": "https://github.com/ElainaCore/ElainaBot_v2",
     "branch": "main",
-    "tags": ["OneBot", "适配器", "WebSocket"]
+    "tags": [
+      "OneBot",
+      "适配器",
+      "WebSocket"
+    ]
   },
   {
     "name": "LGTBot_ElainaBot",
@@ -85,17 +111,101 @@
     "category": "游戏",
     "github": "https://github.com/tiedanGH/LGTBot_ElainaBot",
     "branch": "main",
-    "tags": ["多人", "竞技", "桌游"]
+    "tags": [
+      "多人",
+      "竞技",
+      "桌游"
+    ]
   },
   {
-    "name": "冷曦小型插件合集",
+    "name": "三角洲今日密码",
     "type": "plugin",
     "author": "冷曦",
-    "description": "三角洲今日密码、全量申请、字符字、恶臭生成器、音乐点歌",
-    "version": "1.1.0",
-    "category": "娱乐",
-    "github": "https://github.com/ElainaCore/elaina-plugins-lengxi",
+    "description": "三角洲行动每日密码查询，自动缓存当日密码",
+    "version": "1.0.0",
+    "category": "游戏",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "tags": ["娱乐", "工具", "音乐"]
+    "path": "三角洲今日密码.py",
+    "tags": [
+      "游戏",
+      "三角洲",
+      "查询"
+    ]
+  },
+  {
+    "name": "全量申请",
+    "type": "plugin",
+    "author": "冷曦",
+    "description": "生成群全量消息授权链接，免@处理指令",
+    "version": "1.0.0",
+    "category": "工具",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "全量申请.py",
+    "tags": [
+      "工具",
+      "QQ群",
+      "授权"
+    ]
+  },
+  {
+    "name": "哈基米",
+    "type": "plugin",
+    "author": "冷曦",
+    "description": "随机发送哈基米语音",
+    "version": "1.0.0",
+    "category": "娱乐",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "哈基米.py",
+    "tags": [
+      "娱乐",
+      "语音"
+    ]
+  },
+  {
+    "name": "字符字",
+    "type": "plugin",
+    "author": "冷曦",
+    "description": "将汉字转为字符画",
+    "version": "1.0.0",
+    "category": "娱乐",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "字符字.py",
+    "tags": [
+      "娱乐"
+    ]
+  },
+  {
+    "name": "恶臭生成器",
+    "type": "plugin",
+    "author": "冷曦",
+    "description": "将任意数字转换为 114514 表达式（本地计算）",
+    "version": "1.0.0",
+    "category": "娱乐",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "恶臭生成器.py",
+    "tags": [
+      "娱乐"
+    ]
+  },
+  {
+    "name": "音乐点歌",
+    "type": "plugin",
+    "author": "冷曦",
+    "description": "QQ音乐搜索与播放，支持序号选歌",
+    "version": "1.0.0",
+    "category": "娱乐",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "音乐点歌.py",
+    "tags": [
+      "音乐",
+      "点歌",
+      "娱乐"
+    ]
   }
 ]
