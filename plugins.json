@@ -225,6 +225,21 @@
     ]
   },
   {
+    "name": "针对撤回",
+    "type": "plugin",
+    "author": "冷曦",
+    "description": "被针对的人，发言就会被撤回",
+    "version": "2.0.0",
+    "category": "娱乐",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "针对撤回.py",
+    "tags": [
+      "群管",
+      "娱乐"
+    ]
+  },
+  {
     "name": "群成员入群欢迎",
     "type": "plugin",
     "author": "冷曦",
