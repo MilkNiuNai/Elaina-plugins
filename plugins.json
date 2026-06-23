@@ -286,7 +286,8 @@
     "version": "1.1.0",
     "category": "工具",
     "github": "https://github.com/miaolik/plugin-jz",
-    "branch": "记账2.0.py",
+    "branch": "main",
+    "path": "记账2.0.py",
     "tags": [
       "工具"
     ]
