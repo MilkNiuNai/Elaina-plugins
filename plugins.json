@@ -21,11 +21,12 @@
     "description": "可视化工作流自定义API，热更新，支持变量与节点输出",
     "version": "1.0.1",
     "category": "工具",
-    "github": "https://github.com/lengxi-root/elaina-plugin-workflowapi",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
     "tags": [
       "工具"
-    ]
+    ],
+    "path": "workflowapi"
   },
   {
     "name": "熵增基座",
@@ -142,7 +143,7 @@
     "category": "游戏",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "三角洲今日密码.py",
+    "path": "alone/三角洲今日密码.py",
     "tags": [
       "游戏",
       "三角洲",
@@ -158,7 +159,7 @@
     "category": "工具",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "全量申请.py",
+    "path": "alone/全量申请.py",
     "tags": [
       "工具",
       "QQ群",
@@ -174,7 +175,7 @@
     "category": "娱乐",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "哈基米.py",
+    "path": "alone/哈基米.py",
     "tags": [
       "娱乐",
       "语音"
@@ -189,7 +190,7 @@
     "category": "娱乐",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "字符字.py",
+    "path": "alone/字符字.py",
     "tags": [
       "娱乐"
     ]
@@ -203,7 +204,7 @@
     "category": "娱乐",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "恶臭生成器.py",
+    "path": "alone/恶臭生成器.py",
     "tags": [
       "娱乐"
     ]
@@ -217,7 +218,7 @@
     "category": "娱乐",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "音乐点歌.py",
+    "path": "alone/音乐点歌.py",
     "tags": [
       "音乐",
       "点歌",
@@ -233,7 +234,7 @@
     "category": "娱乐",
     "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
-    "path": "针对撤回.py",
+    "path": "alone/针对撤回.py",
     "tags": [
       "群管",
       "娱乐"
@@ -246,11 +247,12 @@
     "description": "群成员入群自动欢迎推送，支持模板、全群模式、白名单、每日上限，含 Web 面板",
     "version": "1.1.0",
     "category": "工具",
-    "github": "https://github.com/lengxi-root/elaina-plugin-welcome",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
     "branch": "main",
     "tags": [
       "工具"
-    ]
+    ],
+    "path": "welcome"
   },
   {
     "name": "群发插件",
