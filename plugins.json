@@ -1,7 +1,7 @@
 [
   {
     "name": "system",
-    "type": "plugin",
+    "type": "complete",
     "author": "ElainaBot",
     "description": "框架内置系统插件, 提供基础信息、管理、查询、示例等功能",
     "version": "1.0.1",
@@ -16,7 +16,7 @@
   },
   {
     "name": "工作流API",
-    "type": "plugin",
+    "type": "complete",
     "author": "冷曦",
     "description": "可视化工作流自定义API，热更新，支持变量与节点输出",
     "version": "1.0.1",
@@ -29,7 +29,7 @@
   },
   {
     "name": "熵增基座",
-    "type": "plugin",
+    "type": "complete",
     "author": "冷曦",
     "description": "游戏查询插件基座：一键安装三角洲、终末地、洛克王国:世界等游戏查询插件",
     "version": "1.2.0",
@@ -45,7 +45,7 @@
   },
   {
     "name": "云痕前置插件",
-    "type": "plugin",
+    "type": "complete",
     "author": "云痕",
     "description": "前置插件：统一加载 config/ 所有 YAML 配置，自动生成加载日志，供其他插件调用",
     "version": "1.5.0",
@@ -120,7 +120,7 @@
   },
   {
     "name": "LGTBot_ElainaBot",
-    "type": "plugin",
+    "type": "complete",
     "author": "铁蛋",
     "description": "基于 C++ 的 LGTBot 游戏裁判机器人：支持 50+ 种多人游戏，将聊天室打造成游戏竞技平台（仅Linux）",
     "version": "2.2.0",
@@ -135,7 +135,7 @@
   },
   {
     "name": "三角洲今日密码",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "三角洲行动每日密码查询，自动缓存当日密码",
     "version": "1.0.0",
@@ -151,7 +151,7 @@
   },
   {
     "name": "全量申请",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "生成群全量消息授权链接，免@处理指令",
     "version": "1.1.0",
@@ -167,7 +167,7 @@
   },
   {
     "name": "哈基米",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "随机发送哈基米语音",
     "version": "1.0.0",
@@ -182,7 +182,7 @@
   },
   {
     "name": "字符字",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "将汉字转为字符画",
     "version": "1.0.0",
@@ -196,7 +196,7 @@
   },
   {
     "name": "恶臭生成器",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "将任意数字转换为 114514 表达式（本地计算）",
     "version": "1.0.0",
@@ -210,7 +210,7 @@
   },
   {
     "name": "音乐点歌",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "QQ音乐搜索与播放，支持序号选歌",
     "version": "1.0.0",
@@ -226,7 +226,7 @@
   },
   {
     "name": "针对撤回",
-    "type": "plugin",
+    "type": "single",
     "author": "冷曦",
     "description": "被针对的人，发言就会被撤回",
     "version": "2.0.0",
@@ -241,7 +241,7 @@
   },
   {
     "name": "群成员入群欢迎",
-    "type": "plugin",
+    "type": "complete",
     "author": "冷曦",
     "description": "群成员入群自动欢迎推送，支持模板、全群模式、白名单、每日上限，含 Web 面板",
     "version": "1.1.0",
@@ -254,7 +254,7 @@
   },
   {
     "name": "群发插件",
-    "type": "plugin",
+    "type": "complete",
     "author": "miaolik",
     "description": "群发消息，支持群聊和私聊，含 Web 面板",
     "version": "1.1.0",
@@ -267,7 +267,7 @@
   },
   {
     "name": "自定义API",
-    "type": "plugin",
+    "type": "complete",
     "author": "miaolik",
     "description": "自定义API，支持群聊和私聊，含 Web 面板",
     "version": "1.1.0",
@@ -280,7 +280,7 @@
   },
   {
     "name": "记账2.0",
-    "type": "plugin",
+    "type": "single",
     "author": "miaolik",
     "description": "记录日常开支，支持群聊和私聊",
     "version": "1.1.0",
@@ -294,7 +294,7 @@
   },
   {
     "name": "随机工具",
-    "type": "plugin",
+    "type": "complete",
     "author": "铁蛋",
     "description": "骰子算式、随机数生成、元素抽取等随机工具，本地沙箱安全执行，无用户输入回显",
     "version": "1.0.0",
@@ -309,37 +309,17 @@
   },
   {
     "name": "玄天虾虾",
-    "type": "plugin",
+    "type": "complete",
     "author": "baiyifei61-cmd",
     "description": "谐音梗答题游戏，看图猜谐音梗",
     "version": "1.0.0",
     "category": "娱乐",
     "github": "https://github.com/baiyifei61-cmd/xyg-plugin",
     "branch": "main",
-    "tags": ["游戏", "谐音梗", "答题"]
-  },
-  {
-    "name": "今日老婆",
-    "type": "plugin",
-    "author": "Astudlox",
-    "description": "从群成员中随机抽取今日老婆, 支持系统变量、全局冷却、自定义文本/按钮和 Web 管理",
-    "version": "1.1.0",
-    "category": "娱乐",
-    "github": "https://github.com/Youth2018/Ela-plugins",
-    "branch": "main",
-    "path": "今日老婆/今日老婆.py",
-    "tags": ["娱乐", "随机", "抽签", "群聊"]
-  },
-  {
-    "name": "关键词自动回复",
-    "type": "plugin",
-    "author": "Astudlox",
-    "description": "扩展页面管理关键词规则, 支持完全/模糊/正则匹配、优先级、Markdown、变量替换、群聊定向、自定义按钮",
-    "version": "3.1.0",
-    "category": "工具",
-    "github": "https://github.com/Youth2018/Ela-plugins",
-    "branch": "main",
-    "path": "关键词回复/关键词回复.py",
-    "tags": ["工具", "回复", "关键词", "自动化"]
+    "tags": [
+      "游戏",
+      "谐音梗",
+      "答题"
+    ]
   }
 ]

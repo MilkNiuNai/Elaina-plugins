@@ -1,0 +1,72 @@
+name: 插件仓库可用性检查
+
+on:
+  schedule:
+    # 每天 UTC 04:00 = 北京时间 12:00
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+    inputs:
+      grace_hours:
+        description: '不可访问多少小时后自动移除'
+        required: false
+        default: '24'
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: health-check
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 检查各插件仓库是否可访问
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GRACE_HOURS: ${{ github.event.inputs.grace_hours || '24' }}
+        run: python .github/scripts/health_check.py
+
+      - name: 提交清单/状态变更
+        env:
+          CHANGED: ${{ steps.check.outputs.changed }}
+        run: |
+          if [[ -n "$(git status --porcelain plugins.json .github/health-state.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add plugins.json .github/health-state.json
+            MSG="chore(health): 更新仓库可用性状态"
+            [[ "$CHANGED" == "true" ]] && MSG="$MSG 并移除失效插件"
+            git commit -m "$MSG"
+            git push
+          fi
+
+      - name: 开/更新/关闭告警 Issue
+        if: steps.check.outputs.notify == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIVE: ${{ steps.check.outputs.active }}
+        run: |
+          TITLE="🔴 插件仓库可用性告警"
+          BODY=.github/health-report.md
+          NUM=$(gh issue list --state open --json number,title \
+                --jq ".[] | select(.title==\"$TITLE\") | .number" | head -n1)
+          if [[ -n "$NUM" ]]; then
+            gh issue comment "$NUM" --body-file "$BODY"
+          elif [[ "$ACTIVE" == "true" ]]; then
+            NUM=$(gh issue create --title "$TITLE" --body-file "$BODY" | grep -oE '[0-9]+$' | tail -n1)
+          fi
+          # 问题已全部解决 (恢复或已移除) 则关闭告警 Issue
+          if [[ "$ACTIVE" != "true" && -n "$NUM" ]]; then
+            gh issue comment "$NUM" --body "✅ 所有此前不可访问的仓库均已恢复或对应插件已移除，关闭告警。"
+            gh issue close "$NUM"
+          fi
