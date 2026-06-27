@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pull-requests: write
 
 concurrency:
   group: health-check
@@ -36,19 +37,47 @@ jobs:
           GRACE_HOURS: ${{ github.event.inputs.grace_hours || '24' }}
         run: python .github/scripts/health_check.py
 
-      - name: 提交清单/状态变更
+      - name: 创建 PR 提交变更
+        id: pr
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHANGED: ${{ steps.check.outputs.changed }}
         run: |
-          if [[ -n "$(git status --porcelain plugins.json .github/health-state.json)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add plugins.json .github/health-state.json
-            MSG="chore(health): 更新仓库可用性状态"
-            [[ "$CHANGED" == "true" ]] && MSG="$MSG 并移除失效插件"
-            git commit -m "$MSG"
-            git push
+          if [[ -z "$(git status --porcelain plugins.json .github/health-state.json)" ]]; then
+            echo "无变更，跳过"
+            exit 0
           fi
+
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="health-check/${DATE}"
+          MSG="chore(health): 更新仓库可用性状态"
+          [[ "$CHANGED" == "true" ]] && MSG="$MSG 并移除失效插件"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 关闭旧的健康检查 PR
+          OLD_PRS=$(gh pr list --search "head:health-check/" --state open --json number --jq '.[].number' 2>/dev/null || true)
+          for NUM in $OLD_PRS; do
+            gh pr close "$NUM" --delete-branch 2>/dev/null || true
+          done
+
+          # 如果远程已有同名分支则删除
+          git push origin --delete "$BRANCH" 2>/dev/null || true
+
+          git checkout -b "$BRANCH"
+          git add plugins.json .github/health-state.json
+          git commit -m "$MSG"
+          git push origin "$BRANCH"
+
+          # 使用健康检查报告作为 PR 正文（报告中已包含 @插件作者 提醒）
+          gh pr create \
+            --title "$MSG" \
+            --body-file .github/health-report.md \
+            --base main \
+            --head "$BRANCH"
+
+          echo "pr_created=true" >> "$GITHUB_OUTPUT"
 
       - name: 开/更新/关闭告警 Issue
         if: steps.check.outputs.notify == 'true'
