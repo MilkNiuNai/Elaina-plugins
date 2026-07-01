@@ -10,5 +10,18 @@
     "branch": "main",
     "path": "onebot_ai_dev",
     "tags": ["AI", "开发", "工具"]
-  }
+  },
+  {
+    "name": "AstrBot基座",
+    "type": "complete",
+    "author": "冷曦",
+    "description": "在ElainaBot-Onebot上运行 AstrBot框架插件，Web 面板一键装/卸/配置/热重载",
+    "version": "1.0.0",
+    "category": "工具",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "onebot_astr基座",
+    "tags": ["AstrBot", "适配", "工具"]
+}
+
 ]
