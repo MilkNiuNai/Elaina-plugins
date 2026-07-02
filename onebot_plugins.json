@@ -22,6 +22,41 @@
     "branch": "main",
     "path": "onebot_astr基座",
     "tags": ["AstrBot", "适配", "工具"]
-}
-
+  },
+  {
+    "name": "猫娘AI (aicat)",
+    "type": "complete",
+    "author": "冷曦",
+    "description": "接入 OpenAI 兼容接口的 AI 猫娘对话助手，支持人设/上下文记忆/工具调用，Web 面板配置",
+    "version": "1.0.0",
+    "category": "AI",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "onebot_aicat",
+    "tags": ["AI", "聊天", "猫娘"]
+  },
+  {
+    "name": "群管 (groupguard)",
+    "type": "complete",
+    "author": "冷曦",
+    "description": "全功能群管理：入群验证/违禁词/防撤回/刷屏检测/问答/黑白名单/名片锁定/活跃统计，支持 Web 面板配置",
+    "version": "1.0.0",
+    "category": "群管",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "onebot_groupguard",
+    "tags": ["群管", "管理", "工具"]
+  },
+  {
+    "name": "娱乐插件 (play)",
+    "type": "complete",
+    "author": "冷曦",
+    "description": "表情包(meme)/点歌/AI绘画一体的娱乐插件，附哈基米语音与自闭禁言，支持 Web 面板配置",
+    "version": "1.1.0",
+    "category": "娱乐",
+    "github": "https://github.com/lengxi-root/elaina-plugins-lengxi",
+    "branch": "main",
+    "path": "onebot_play",
+    "tags": ["娱乐", "点歌", "绘画"]
+  }
 ]
