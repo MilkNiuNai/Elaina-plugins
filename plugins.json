@@ -327,21 +327,6 @@
     ]
   },
   {
-    "name": "玄天虾虾",
-    "type": "complete",
-    "author": "baiyifei61-cmd",
-    "description": "谐音梗答题游戏，看图猜谐音梗",
-    "version": "1.0.0",
-    "category": "娱乐",
-    "github": "https://github.com/baiyifei61-cmd/xyg-plugin",
-    "branch": "main",
-    "tags": [
-      "游戏",
-      "谐音梗",
-      "答题"
-    ]
-  },
-  {
     "name": "舒尔特方格",
     "type": "single",
     "author": "孟夏十三",
