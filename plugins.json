@@ -454,9 +454,7 @@
     "github": "https://github.com/baiyifei61-cmd/xyg-plugin",
     "branch": "main",
     "tags": ["游戏", "谐音梗", "答题"]
-  }
-]
-[
+  },
   {
     "name": "系统状态",
     "type": "complete",
